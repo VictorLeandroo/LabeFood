@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=5cb646&size=35&center=true&vCenter=true&width=1000&lines=Bem+Vindo+ao+Projeto+FutureEats;Peça+a+sua+comida+agora+:%29)](https://git.io/typing-svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+Este projeto foi feito para bootcamp Labenu, como projeto final de Front-End. O objetivo era fazer um aplicativo de entrega de comida, que tivesse : Tela de Login; Tela de Cadastro, Menu de Restaurantes, Tela de Produtos do Restaurantes Escolhido, Carrinho e Tela com o Pedido em Andamento
+</div>
 
-## Available Scripts
+ <br/>
 
-In the project directory, you can run:
+<div align="center">
+  <h4>Link Surge</h4>
+  - https://charming-goose.surge.sh
+</div>
 
-### `npm start`
+<div align="center">
+<h2>Tecnologias Utilizadas</h2>
+<img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<div align="center">
+<h2 >Autores</h2>
+<a href="https://github.com/VictorLeandroo"><img src="https://avatars.githubusercontent.com/VictorLeandroo" width=115></a>
+<a href="https://github.com/MichelleMach"><img src="https://avatars.githubusercontent.com/MichelleMach" width=115></a>
+<a href="https://github.com/BrunaVitoriaDEV"><img src="https://avatars.githubusercontent.com/BrunaVitoriaDEV" width=115></a>
+<a href="https://github.com/ElisonMoises"><img src="https://avatars.githubusercontent.com/ElisonMoises" width=115></a>
+<a href="https://github.com/peedroemanuel"><img src="https://avatars.githubusercontent.com/peedroemanuel" width=115></a>
+ </div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br/>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div>
+<img src="https://user-images.githubusercontent.com/100371634/183316468-6ef2c9e0-bbca-4283-9bea-b105f140791e.png" />
+<img src="https://user-images.githubusercontent.com/100371634/183316475-3affdc81-5949-40df-9473-e38ecbc522fe.png" />
+<img src="https://user-images.githubusercontent.com/100371634/183316597-3f59b8f0-0b74-4c67-a551-6004f9a832db.png" />
+</div>
