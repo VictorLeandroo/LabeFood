@@ -16,7 +16,7 @@ import { goBack, goToEditEndereco, goToEditPerfil } from '../../router/coordenat
 
 
 const TelaPerfil = () => {
-  const [dataTrip, setDataTrip] = useState([])
+  const [perfil, setPerfil] = useState([])
   const [restaurantes, setRestaurantes] = useState([])
   const [data, setData] = useState(new Date())
   const navigate = useNavigate()
@@ -40,7 +40,7 @@ const TelaPerfil = () => {
 
     })
       .then((res) => {
-        setDataTrip(res.data.user)
+        setPerfil(res.data.user)
 
 
       }).catch((erro) => {
@@ -78,7 +78,7 @@ const TelaPerfil = () => {
       <C.CardHistoricoP key={indice}>
         <C.TituloHistorico>{orders.restaurantName}</C.TituloHistorico>
         <C.DataEndereco>{data.getDate()}/{data.getMonth()}/{data.getFullYear()}</C.DataEndereco>
-        <C.Subtotal>Subtotal: {orders.totalPrice}</C.Subtotal>
+        <C.Subtotal>Subtotal: {orders.totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</C.Subtotal>
       </C.CardHistoricoP>
 
     )
@@ -97,9 +97,9 @@ const TelaPerfil = () => {
       <C.PaidaSessoes>
         <C.CardPessoa>
           <section >
-            <C.LetrasPessoa>{dataTrip.name}</C.LetrasPessoa>
-            <C.LetrasPessoa>{dataTrip.email}</C.LetrasPessoa>
-            <C.LetrasPessoa>{dataTrip.cpf}</C.LetrasPessoa>
+            <C.LetrasPessoa>{perfil.name}</C.LetrasPessoa>
+            <C.LetrasPessoa>{perfil.email}</C.LetrasPessoa>
+            <C.LetrasPessoa>{perfil.cpf}</C.LetrasPessoa>
           </section>
 
           <C.Editor>
@@ -111,7 +111,7 @@ const TelaPerfil = () => {
         <C.CardEndereco>
           <C.InfosEndereco>
             <C.TituloEndereco>Endereço cadastrado</C.TituloEndereco>
-            <C.LetraEndereco>{dataTrip.address}</C.LetraEndereco>
+            <C.LetraEndereco>{perfil.address}</C.LetraEndereco>
           </C.InfosEndereco>
           <C.Editor>
             <C.ButtonEditor type="button"> <img src={Edit} onClick={() => goToEditEndereco(navigate)} alt="Botão Editar endereço" /></C.ButtonEditor>
