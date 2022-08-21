@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import backButton from '../../assets/back-button.png'
 import { goBack } from '../../router/coordenator'
 import { useNavigate } from 'react-router-dom'
 import GlobalContext from '../../global/GlobalContext';
-import { useContext } from 'react'
 import * as C from './styled'
-import { BASE_URL } from '../../constants/url'
-import axios from 'axios'
 import CardCarrinho from '../../components/cards/cardCarrinho/CardCarrinho'
 import restaurantImg from '../../assets/homepage.png'
 import shoppingCartImg from '../../assets/active-shopping-cart.png'
@@ -25,7 +22,7 @@ const TelaCarrinho = () => {
     const [price, setTotalPrice] = useState(0)
     const [pagamento, setPagamento] = useState("")
     const [order, setOrder] = useState([])
-   
+
 
 
     const navigate = useNavigate()
@@ -38,8 +35,6 @@ const TelaCarrinho = () => {
         setPagamento(e.target.value)
     }
 
-    // console.log(states.pedidoFeito)
-
     const confirmarPedido = () => {
         states.carrinho.map((product) => {
             const produto = {
@@ -51,14 +46,14 @@ const TelaCarrinho = () => {
             }
 
             return (
-                ConfirmOrder(states.id, produto, setOrder, setters.setPedidoFeito, navigate)
+                ConfirmOrder(states.id, produto, setOrder, navigate, setters.setCarrinho)
             )
 
         })
 
     }
 
-    const removerProduto = (id, quantidade ) => {
+    const removerProduto = (id, quantidade) => {
         Swal.fire({
             title: 'Tem certeza que quer remover esse produto do seu carrinho?',
             confirmButtonColor: '#3085d6',
@@ -69,7 +64,7 @@ const TelaCarrinho = () => {
             if (result.isConfirmed) {
                 carrinho?.map((product, index) => {
                     let qntCarrinho = product.quantity
-                    if(qntCarrinho >= 1 ) {
+                    if (qntCarrinho >= 1) {
                         setters.setCarrinho(product.quantity - 1)
                         setQntCarrinho(product.quantity - 1)
                         console.log(carrinho)
@@ -91,14 +86,18 @@ const TelaCarrinho = () => {
 
     useEffect(() => {
 
-        states.restaurantes.map((res) => {
-            if (res.id == states.id) {
-                setFrete(res.shipping)
-            }
-        })
-
         let totalPrice = 0
-        if (states.carrinho.length > 0) {
+        if (states.carrinho.length == 0) {
+            setFrete(0)
+            setTotalPrice(0)
+        } else if (states.carrinho.length > 0) {
+
+            states.restaurantes.map((res) => {
+                if (res.id == states.id) {
+                    setFrete(res.shipping)
+                }
+            })
+
             states.carrinho.forEach(element => {
                 totalPrice = totalPrice + element.price * element.quantity
                 const subTotal = totalPrice + frete
@@ -142,7 +141,7 @@ const TelaCarrinho = () => {
 
             <C.Carrinho>
                 {
-                    states.carrinho.length === 0 ? <C.CarrinhoVazio>Carrinho Vazio</C.CarrinhoVazio> :
+                    states.carrinho?.length === 0 ? <C.CarrinhoVazio>Carrinho Vazio</C.CarrinhoVazio> :
                         carrinho?.map((produtos, indice) => {
 
                             return (
@@ -173,7 +172,7 @@ const TelaCarrinho = () => {
                 </C.CheckBox>
 
                 <C.CheckBox>
-                    <input type="radio" name="pagamento" id="cartao" value="cardcredit" onChange={onChangeCard} />
+                    <input type="radio" name="pagamento" id="cartao" value="creditcard" onChange={onChangeCard} />
                     <label htmlFor="cartao-de-credito">Cartão de Crédito</label>
                 </C.CheckBox>
 
